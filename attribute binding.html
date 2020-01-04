@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute blinding</title>
+</head>
+<body>
+<script src="../js/vue.min%20(1).js"></script>
+<div id="app">
+    <p>
+        {{sayhellow()}}-<a v-bind:href="link">Google</a>
+    </p>
+
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            title:'hello world',
+            link: 'https://www.google.com/'
+        },
+        methods:{
+            sayhellow:function(){
+                return this.title;
+            }
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>out-raw-html</title>
+</head>
+<body>
+<script src="../js/vue.min%20(1).js"></script>
+<div id="app">
+    <p v-html="finishLink"></p>
+
+
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            finishLink:'<a href="https://www.google.com/">Google</a>'
+        }
+    })
+</script>
+</body>
+</html>

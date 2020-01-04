@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../js/vue.min%20(1).js"></script>
+<div id="app">
+    <button @click="counter++">increase</button>
+    <p>{{ output }} | {{counter}}</p>
+
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+
+            counter:0
+        },
+        computed:{
+            output:function () {
+                console.log('computed');
+                return this.counter > 5 ? 'Greater then 5' : 'Less then 5';
+            }
+        },
+        watch:{
+            counter:function () {
+                var vm = this;
+                setTimeout(function () {
+                    vm.counter = 0;
+
+                },3000);
+
+            }
+
+        }
+    })
+</script>
+
+</body>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listing to keyboard</title>
+</head>
+<body>
+<script src="../js/vue.min%20(1).js"></script>
+<div id="app">
+    <input type="text" @keyup.enter="alert1" @keyup.space="alert2"  />
+
+</div>
+<script>
+    new Vue({
+         el:'#app',
+        methods:{
+            alert1:function () {
+                alert('are you sure');
+            },
+            alert2:function () {
+                alert('should not speace here');
+            }
+        }
+
+    });
+</script>
+</body>
+</html>

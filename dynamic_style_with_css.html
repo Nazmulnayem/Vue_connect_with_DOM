@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dynamic style</title>
+    <link type="text/css" rel="stylesheet" href="../css/mystyle.css"/>
+</head>
+<body>
+<script src="../js/vue.min%20(1).js"></script>
+<div id="app">
+    <div class="demo" @click="attachRed=!attachRed" :class="{red:attachRed,green:!attachRed}"></div>
+    <div class="demo" @click="attachGreen=!attachGreen" :class="{green:attachGreen}"></div>
+    <div class="demo"></div>
+    <div class="demo"></div>
+</div>
+<script>
+    new Vue({
+        el:'#app',
+            data:{
+            attachRed:false,
+                attachGreen:false
+        }
+    });
+</script>
+</body>
+</html>
