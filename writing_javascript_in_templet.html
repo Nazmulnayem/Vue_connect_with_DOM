@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../js/vue.min%20(1).js"></script>
+<div id="app">
+    <button @click="counter++">increase</button>
+    <p>{{counter * 2 > 10 ? 'Greater then 10' : 'Smaller then 10'}}-{{counter*2}}</p>
+
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            counter:0
+        }
+    })
+</script>
+</body>
+</html>

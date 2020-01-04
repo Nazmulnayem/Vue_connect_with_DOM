@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../js/vue.min%20(1).js"></script>
+<div id="app">
+    <p>
+        {{sayhellow()}}
+    </p>
+
+</div>
+<script>
+    new Vue({
+        el:'#app',
+        data:{
+            title:'Hellow world'
+        },
+        methods:{
+            sayhellow: function () {
+                return this.title;
+
+            }
+        }
+    });
+</script>
+</body>
+
+</html>
